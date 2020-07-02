@@ -67,3 +67,44 @@
       
       resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
     }
+  
+    const quizContainer = document.getElementById('quiz');
+    const resultsContainer = document.getElementById('results');
+    const submitButton = document.getElementById('submit');
+    const myQuestions = [
+      {
+        question: "What company is responsible for the release of JavaScript?",
+        answers: {
+          a: "NetGear",
+          b: "NetFlix",
+          c: "NetScape"
+        },
+        correctAnswer: "c"
+      },
+      {
+        question: "What is term concatenation?",
+        answers: {
+          a: "A method used to join two or more cats",
+          b: "A method used to join two or more strings",
+          c: "A method used to join two or more arrays"
+        },
+        correctAnswer: "b"
+      },
+      {
+        question: "Inside which HTML element do we put the JavaScript?",
+        answers: {
+          a: "style",
+          b: "body",
+          c: "head",
+          d: "script"
+        },
+        correctAnswer: "d"
+      }
+    ];
+  
+    
+    buildQuiz();
+  
+    
+    submitButton.addEventListener('click', showResults);
+  })();
